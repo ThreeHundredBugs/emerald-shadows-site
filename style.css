@@ -533,6 +533,11 @@ select.form-control {
   padding-left: var(--space-16);
 }
 
+.hero .container {
+    display: flex;
+    justify-content: center;
+}
+
 @media (min-width: 640px) {
   .container {
     max-width: var(--container-sm);
@@ -662,14 +667,14 @@ select.form-control {
   --color-text: #f0f0f0;
   --color-text-secondary: #b0b0b0;
   --color-border: #333;
-  
+
   /* Accent colors for the game */
   --accent-emerald: #00ff88;
   --accent-red: #ff3366;
   --accent-gold: #ffcc00;
   --accent-blue: #3399ff;
   --accent-orange: #ff6633;
-  
+
   /* Limbo-style shadows and effects */
   --shadow-dark: 0 8px 32px rgba(0, 0, 0, 0.8);
   --shadow-accent: 0 0 20px rgba(0, 255, 136, 0.3);
@@ -1013,7 +1018,7 @@ body {
 }
 
 .boss__image {
-  height: 200px;
+  height: 500px;
   overflow: hidden;
 }
 
@@ -1191,8 +1196,8 @@ body {
 }
 
 .accent__color {
-  width: 40px;
-  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
   border-radius: 50%;
   box-shadow: 0 0 15px currentColor;
 }
@@ -1282,10 +1287,19 @@ body {
   background: var(--accent-gold);
 }
 
+.location__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-10);
+}
+
 .location__name {
   color: var(--accent-emerald);
   font-size: var(--font-size-xl);
-  margin-bottom: var(--space-8);
+}
+
+.location__description {
+  margin: 0;
 }
 
 /* Responsive Design */
@@ -1294,23 +1308,23 @@ body {
     flex-wrap: wrap;
     gap: var(--space-16);
   }
-  
+
   .hero__title-main {
     font-size: 3rem;
   }
-  
+
   .bosses__grid {
     grid-template-columns: 1fr;
   }
-  
+
   .mechanics__grid {
     grid-template-columns: 1fr;
   }
-  
+
   .accent__grid {
     grid-template-columns: 1fr;
   }
-  
+
   .location__item {
     flex-direction: column;
     text-align: center;
