@@ -10,14 +10,18 @@
     <!-- Navigation -->
     <nav class="nav">
         <ul class="nav__list">
-            <li><a href="#hero" class="nav__link" data-section="hero">Главная</a></li>
-            <li><a href="#concept" class="nav__link" data-section="concept">Концепция</a></li>
-            <li><a href="#story" class="nav__link" data-section="story">Сюжет</a></li>
-            <li><a href="#bosses" class="nav__link" data-section="bosses">Боссы</a></li>
-            <li><a href="#mechanics" class="nav__link" data-section="mechanics">Механики</a></li>
-            <li><a href="#visual" class="nav__link" data-section="visual">Стиль</a></li>
-            <li><a href="#locations" class="nav__link" data-section="locations">Локации</a></li>
+            <li><a href="#hero" class="nav__link" data-section="hero" data-translate="nav.main">Главная</a></li>
+            <li><a href="#concept" class="nav__link" data-section="concept" data-translate="nav.concept">Концепция</a></li>
+            <li><a href="#story" class="nav__link" data-section="story" data-translate="nav.story">Сюжет</a></li>
+            <li><a href="#bosses" class="nav__link" data-section="bosses" data-translate="nav.bosses">Боссы</a></li>
+            <li><a href="#mechanics" class="nav__link" data-section="mechanics" data-translate="nav.mechanics">Механики</a></li>
+            <li><a href="#visual" class="nav__link" data-section="visual" data-translate="nav.style">Стиль</a></li>
+            <li><a href="#locations" class="nav__link" data-section="locations" data-translate="nav.locations">Локации</a></li>
         </ul>
+        <div class="language-switcher">
+            <button class="lang-btn" data-lang="ru" aria-label="Русский">RU</button>
+            <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+        </div>
     </nav>
 
     <!-- Hero Section -->
@@ -25,21 +29,21 @@
         <div class="container">
             <div class="hero__content">
                 <h1 class="hero__title">
-                    <span class="hero__title-main">ИЗУМРУДНЫЕ ТЕНИ</span>
-                    <span class="hero__title-sub">Мрачная деконструкция Волшебника страны Оз</span>
+                    <span class="hero__title-main" data-translate="hero.title">ИЗУМРУДНЫЕ ТЕНИ</span>
+                    <span class="hero__title-sub" data-translate="hero.subtitle">Мрачная деконструкция Волшебника страны Оз</span>
                 </h1>
                 <div class="hero__image">
                     <img src="https://pplx-res.cloudinary.com/image/upload/v1750836697/gpt4o_images/y4czgngjbisakdmio4hr.png" alt="Разрушенный Изумрудный город" class="hero__img">
                 </div>
-                <p class="hero__description">
+                <p class="hero__description" data-translate="hero.description">
                     Элли возвращается в Страну Оз, но находит разрушенный Изумрудный город. 
                     Ее бывшие друзья стали тиранами, а волшебные дары оказались проклятиями.
                 </p>
                 <div class="hero__genres">
-                    <span class="genre-tag">2D Платформер</span>
-                    <span class="genre-tag">Головоломки</span>
-                    <span class="genre-tag">Психологический хоррор</span>
-                    <span class="genre-tag age-rating">16+</span>
+                    <span class="genre-tag" data-translate="hero.genres.platformer">2D Платформер</span>
+                    <span class="genre-tag" data-translate="hero.genres.puzzles">Головоломки</span>
+                    <span class="genre-tag" data-translate="hero.genres.horror">Психологический хоррор</span>
+                    <span class="genre-tag age-rating" data-translate="hero.genres.ageRating">16+</span>
                 </div>
             </div>
         </div>
@@ -48,23 +52,23 @@
     <!-- Concept Section -->
     <section id="concept" class="concept section">
         <div class="container">
-            <h2 class="section__title">Концепция</h2>
+            <h2 class="section__title" data-translate="concept.title">Концепция</h2>
             <div class="concept__grid">
                 <div class="concept__card">
-                    <h3 class="concept__card-title">Жанр</h3>
-                    <p>2D платформер-головоломка с элементами психологического хоррора</p>
+                    <h3 class="concept__card-title" data-translate="concept.genre.title">Жанр</h3>
+                    <p data-translate="concept.genre.description">2D платформер-головоломка с элементами психологического хоррора</p>
                 </div>
                 <div class="concept__card">
-                    <h3 class="concept__card-title">Стиль</h3>
-                    <p>Монохромная черно-белая графика с яркими цветовыми акцентами</p>
+                    <h3 class="concept__card-title" data-translate="concept.style.title">Стиль</h3>
+                    <p data-translate="concept.style.description">Монохромная черно-белая графика с яркими цветовыми акцентами</p>
                 </div>
                 <div class="concept__card">
-                    <h3 class="concept__card-title">Аудитория</h3>
-                    <p>16+ (темная деконструкция детской сказки)</p>
+                    <h3 class="concept__card-title" data-translate="concept.audience.title">Аудитория</h3>
+                    <p data-translate="concept.audience.description">16+ (темная деконструкция детской сказки)</p>
                 </div>
                 <div class="concept__card concept__card--full">
-                    <h3 class="concept__card-title">Основная идея</h3>
-                    <p>Прошло много лет после событий оригинальной сказки. Волшебник Гудвин создал тоталитарную систему, где дары друзей Элли оказались проклятиями. Изумрудный город охвачен восстанием и разрушениями.</p>
+                    <h3 class="concept__card-title" data-translate="concept.mainIdea.title">Основная идея</h3>
+                    <p data-translate="concept.mainIdea.description">Прошло много лет после событий оригинальной сказки. Волшебник Гудвин создал тоталитарную систему, где дары друзей Элли оказались проклятиями. Изумрудный город охвачен восстанием и разрушениями.</p>
                 </div>
             </div>
         </div>
@@ -73,34 +77,34 @@
     <!-- Story Section -->
     <section id="story" class="story section">
         <div class="container">
-            <h2 class="section__title">Сюжет</h2>
+            <h2 class="section__title" data-translate="story.title">Сюжет</h2>
             <div class="story__timeline">
                 <div class="story__event" data-reveal="fade-in">
                     <div class="story__event-marker"></div>
                     <div class="story__event-content">
-                        <h3>Возвращение</h3>
-                        <p>Элли возвращается в Страну Оз и обнаруживает Изумрудный город в огне и руинах.</p>
+                        <h3 data-translate="story.events.return.title">Возвращение</h3>
+                        <p data-translate="story.events.return.description">Элли возвращается в Страну Оз и обнаруживает Изумрудный город в огне и руинах.</p>
                     </div>
                 </div>
                 <div class="story__event" data-reveal="fade-in">
                     <div class="story__event-marker accent-red"></div>
                     <div class="story__event-content">
-                        <h3>Открытие</h3>
-                        <p>Волшебник Гудвин превратил город в тоталитарное государство, а друзья Элли стали его жестокими наместниками.</p>
+                        <h3 data-translate="story.events.discovery.title">Открытие</h3>
+                        <p data-translate="story.events.discovery.description">Волшебник Гудвин превратил город в тоталитарное государство, а друзья Элли стали его жестокими наместниками.</p>
                     </div>
                 </div>
                 <div class="story__event" data-reveal="fade-in">
                     <div class="story__event-marker accent-gold"></div>
                     <div class="story__event-content">
-                        <h3>Побег</h3>
-                        <p>Элли должна сбежать из горящего города и пройти через владения каждого из своих бывших товарищей.</p>
+                        <h3 data-translate="story.events.escape.title">Побег</h3>
+                        <p data-translate="story.events.escape.description">Элли должна сбежать из горящего города и пройти через владения каждого из своих бывших товарищей.</p>
                     </div>
                 </div>
                 <div class="story__event" data-reveal="fade-in">
                     <div class="story__event-marker accent-blue"></div>
                     <div class="story__event-content">
-                        <h3>Истина</h3>
-                        <p>В финале Элли предстоит узнать правду о том, что произошло с ее друзьями и найти путь к искуплению.</p>
+                        <h3 data-translate="story.events.truth.title">Истина</h3>
+                        <p data-translate="story.events.truth.description">В финале Элли предстоит узнать правду о том, что произошло с ее друзьями и найти путь к искуплению.</p>
                     </div>
                 </div>
             </div>
@@ -110,23 +114,23 @@
     <!-- Bosses Section -->
     <section id="bosses" class="bosses section">
         <div class="container">
-            <h2 class="section__title">Боссы - Падшие друзья</h2>
+            <h2 class="section__title" data-translate="bosses.title">Боссы - Падшие друзья</h2>
             <div class="bosses__grid">
                 <div class="boss__card" data-boss="scarecrow">
                     <div class="boss__image">
                         <img src="https://pplx-res.cloudinary.com/image/upload/v1750836767/gpt4o_images/b3h1defy1h5swa7fhtmm.png" alt="Страшила">
                     </div>
                     <div class="boss__content">
-                        <h3 class="boss__name">Страшила</h3>
-                        <h4 class="boss__title">Повелитель Ворон</h4>
-                        <div class="boss__location">Заброшенные поля</div>
-                        <p class="boss__corruption">Получил не мудрость, а жестокий расчет и цинизм</p>
+                        <h3 class="boss__name" data-translate="bosses.scarecrow.name">Страшила</h3>
+                        <h4 class="boss__title" data-translate="bosses.scarecrow.title">Повелитель Ворон</h4>
+                        <div class="boss__location" data-translate="bosses.scarecrow.location">Заброшенные поля</div>
+                        <p class="boss__corruption" data-translate="bosses.scarecrow.corruption">Получил не мудрость, а жестокий расчет и цинизм</p>
                         <div class="boss__abilities">
-                            <span class="ability">Призывает стаи ворон</span>
-                            <span class="ability">Использует чучела как ловушки</span>
-                            <span class="ability">Меняет локации в реальном времени</span>
+                            <span class="ability" data-translate="bosses.scarecrow.abilities.0">Призывает стаи ворон</span>
+                            <span class="ability" data-translate="bosses.scarecrow.abilities.1">Использует чучела как ловушки</span>
+                            <span class="ability" data-translate="bosses.scarecrow.abilities.2">Меняет локации в реальном времени</span>
                         </div>
-                        <div class="boss__accent accent-red">Красные глаза ворон</div>
+                        <div class="boss__accent accent-red" data-translate="bosses.scarecrow.accent">Красные глаза ворон</div>
                     </div>
                 </div>
 
@@ -135,16 +139,16 @@
                         <img src="https://pplx-res.cloudinary.com/image/upload/v1750836837/gpt4o_images/lpzwemupdulkdwvzbha0.png" alt="Железный дровосек">
                     </div>
                     <div class="boss__content">
-                        <h3 class="boss__name">Железный дровосек</h3>
-                        <h4 class="boss__title">Король Машин</h4>
-                        <div class="boss__location">Индустриальная зона</div>
-                        <p class="boss__corruption">Получил не сердце, а холодную жестокость</p>
+                        <h3 class="boss__name" data-translate="bosses.tinman.name">Железный дровосек</h3>
+                        <h4 class="boss__title" data-translate="bosses.tinman.title">Король Машин</h4>
+                        <div class="boss__location" data-translate="bosses.tinman.location">Индустриальная зона</div>
+                        <p class="boss__corruption" data-translate="bosses.tinman.corruption">Получил не сердце, а холодную жестокость</p>
                         <div class="boss__abilities">
-                            <span class="ability">Управляет механическими пилами</span>
-                            <span class="ability">Создает лабиринты из механизмов</span>
-                            <span class="ability">Использует пар и огонь</span>
+                            <span class="ability" data-translate="bosses.tinman.abilities.0">Управляет механическими пилами</span>
+                            <span class="ability" data-translate="bosses.tinman.abilities.1">Создает лабиринты из механизмов</span>
+                            <span class="ability" data-translate="bosses.tinman.abilities.2">Использует пар и огонь</span>
                         </div>
-                        <div class="boss__accent accent-orange">Оранжевые искры и пламя</div>
+                        <div class="boss__accent accent-orange" data-translate="bosses.tinman.accent">Оранжевые искры и пламя</div>
                     </div>
                 </div>
 
@@ -153,16 +157,16 @@
                         <img src="https://pplx-res.cloudinary.com/image/upload/v1750836888/gpt4o_images/gitjg00af8zha10acgv6.png" alt="Трусливый лев">
                     </div>
                     <div class="boss__content">
-                        <h3 class="boss__name">Трусливый лев</h3>
-                        <h4 class="boss__title">Зверь из Тени</h4>
-                        <div class="boss__location">Мрачный лес</div>
-                        <p class="boss__corruption">Получил не смелость, а безрассудную агрессию</p>
+                        <h3 class="boss__name" data-translate="bosses.lion.name">Трусливый лев</h3>
+                        <h4 class="boss__title" data-translate="bosses.lion.title">Зверь из Тени</h4>
+                        <div class="boss__location" data-translate="bosses.lion.location">Мрачный лес</div>
+                        <p class="boss__corruption" data-translate="bosses.lion.corruption">Получил не смелость, а безрассудную агрессию</p>
                         <div class="boss__abilities">
-                            <span class="ability">Атакует из теней</span>
-                            <span class="ability">Создает звуковые ловушки</span>
-                            <span class="ability">Использует инстинкт страха</span>
+                            <span class="ability" data-translate="bosses.lion.abilities.0">Атакует из теней</span>
+                            <span class="ability" data-translate="bosses.lion.abilities.1">Создает звуковые ловушки</span>
+                            <span class="ability" data-translate="bosses.lion.abilities.2">Использует инстинкт страха</span>
                         </div>
-                        <div class="boss__accent accent-gold">Золотые глаза в темноте</div>
+                        <div class="boss__accent accent-gold" data-translate="bosses.lion.accent">Золотые глаза в темноте</div>
                     </div>
                 </div>
             </div>
@@ -172,22 +176,22 @@
     <!-- Mechanics Section -->
     <section id="mechanics" class="mechanics section">
         <div class="container">
-            <h2 class="section__title">Уникальные механики</h2>
+            <h2 class="section__title" data-translate="mechanics.title">Уникальные механики</h2>
             <div class="mechanics__grid">
                 <div class="mechanic__card accent-red-bg" data-reveal="slide-up">
                     <div class="mechanic__icon">👠</div>
-                    <h3 class="mechanic__name">Красные туфельки</h3>
-                    <p class="mechanic__description">Позволяют видеть скрытые платформы и проходы</p>
+                    <h3 class="mechanic__name" data-translate="mechanics.redShoes.name">Красные туфельки</h3>
+                    <p class="mechanic__description" data-translate="mechanics.redShoes.description">Позволяют видеть скрытые платформы и проходы</p>
                 </div>
                 <div class="mechanic__card accent-gold-bg" data-reveal="slide-up">
                     <div class="mechanic__icon">💎</div>
-                    <h3 class="mechanic__name">Осколки правды</h3>
-                    <p class="mechanic__description">Воспоминания, открывающие новые пути</p>
+                    <h3 class="mechanic__name" data-translate="mechanics.truthShards.name">Осколки правды</h3>
+                    <p class="mechanic__description" data-translate="mechanics.truthShards.description">Воспоминания, открывающие новые пути</p>
                 </div>
                 <div class="mechanic__card accent-blue-bg" data-reveal="slide-up">
                     <div class="mechanic__icon">👻</div>
-                    <h3 class="mechanic__name">Тени прошлого</h3>
-                    <p class="mechanic__description">Призрачные помощники из добрых воспоминаний</p>
+                    <h3 class="mechanic__name" data-translate="mechanics.shadowsPast.name">Тени прошлого</h3>
+                    <p class="mechanic__description" data-translate="mechanics.shadowsPast.description">Призрачные помощники из добрых воспоминаний</p>
                 </div>
             </div>
         </div>
@@ -196,41 +200,41 @@
     <!-- Visual Style Section -->
     <section id="visual" class="visual section">
         <div class="container">
-            <h2 class="section__title">Визуальный стиль</h2>
+            <h2 class="section__title" data-translate="visual.title">Визуальный стиль</h2>
             <div class="visual__content">
                 <div class="visual__base">
-                    <h3>Основа</h3>
-                    <p>Черно-белая гамма с оттенками серого в стиле игры Limbo</p>
+                    <h3 data-translate="visual.base.title">Основа</h3>
+                    <p data-translate="visual.base.description">Черно-белая гамма с оттенками серого в стиле игры Limbo</p>
                 </div>
                 <div class="visual__accents">
-                    <h3>Цветовые акценты</h3>
+                    <h3 data-translate="visual.accents.title">Цветовые акценты</h3>
                     <div class="accent__grid">
                         <div class="accent__item">
                             <div class="accent__color accent-emerald"></div>
                             <div class="accent__info">
-                                <strong>Изумрудный</strong>
-                                <span>Магические элементы и важные объекты</span>
+                                <strong data-translate="visual.accents.emerald.name">Изумрудный</strong>
+                                <span data-translate="visual.accents.emerald.description">Магические элементы и важные объекты</span>
                             </div>
                         </div>
                         <div class="accent__item">
                             <div class="accent__color accent-red"></div>
                             <div class="accent__info">
-                                <strong>Красный</strong>
-                                <span>Опасности и способности Элли</span>
+                                <strong data-translate="visual.accents.red.name">Красный</strong>
+                                <span data-translate="visual.accents.red.description">Опасности и способности Элли</span>
                             </div>
                         </div>
                         <div class="accent__item">
                             <div class="accent__color accent-gold"></div>
                             <div class="accent__info">
-                                <strong>Золотой</strong>
-                                <span>Воспоминания и важные предметы</span>
+                                <strong data-translate="visual.accents.gold.name">Золотой</strong>
+                                <span data-translate="visual.accents.gold.description">Воспоминания и важные предметы</span>
                             </div>
                         </div>
                         <div class="accent__item">
                             <div class="accent__color accent-blue"></div>
                             <div class="accent__info">
-                                <strong>Синий</strong>
-                                <span>Элементы надежды</span>
+                                <strong data-translate="visual.accents.blue.name">Синий</strong>
+                                <span data-translate="visual.accents.blue.description">Элементы надежды</span>
                             </div>
                         </div>
                     </div>
@@ -242,40 +246,41 @@
     <!-- Locations Section -->
     <section id="locations" class="locations section">
         <div class="container">
-            <h2 class="section__title">Локации</h2>
+            <h2 class="section__title" data-translate="locations.title">Локации</h2>
             <div class="locations__list">
                 <div class="location__item" data-reveal="fade-in">
                     <div class="location__marker accent-emerald"></div>
                     <div class="location__content">
-                        <h3 class="location__name">Горящий Изумрудный город</h3>
-                        <p class="location__description">Пролог - обучение базовым механикам среди разрушений</p>
+                        <h3 class="location__name" data-translate="locations.emeraldCity.name">Горящий Изумрудный город</h3>
+                        <p class="location__description" data-translate="locations.emeraldCity.description">Пролог - обучение базовым механикам среди разрушений</p>
                     </div>
                 </div>
                 <div class="location__item" data-reveal="fade-in">
                     <div class="location__marker accent-red"></div>
                     <div class="location__content">
-                        <h3 class="location__name">Заброшенные поля</h3>
-                        <p class="location__description">Головоломки с воронами и динамически меняющиеся лабиринты</p>
+                        <h3 class="location__name" data-translate="locations.abandonedFields.name">Заброшенные поля</h3>
+                        <p class="location__description" data-translate="locations.abandonedFields.description">Головоломки с воронами и динамически меняющиеся лабиринты</p>
                     </div>
                 </div>
                 <div class="location__item" data-reveal="fade-in">
                     <div class="location__marker accent-orange"></div>
                     <div class="location__content">
-                        <h3 class="location__name">Индустриальная зона</h3>
-                        <p class="location__description">Механические головоломки с опасными движущимися частями</p>
+                        <h3 class="location__name" data-translate="locations.industrialZone.name">Индустриальная зона</h3>
+                        <p class="location__description" data-translate="locations.industrialZone.description">Механические головоломки с опасными движущимися частями</p>
                     </div>
                 </div>
                 <div class="location__item" data-reveal="fade-in">
                     <div class="location__marker accent-gold"></div>
                     <div class="location__content">
-                        <h3 class="location__name">Темный лес</h3>
-                        <p class="location__description">Стелс-механики и работа с тенями и светом</p>
+                        <h3 class="location__name" data-translate="locations.darkForest.name">Темный лес</h3>
+                        <p class="location__description" data-translate="locations.darkForest.description">Стелс-механики и работа с тенями и светом</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <script src="translations.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
