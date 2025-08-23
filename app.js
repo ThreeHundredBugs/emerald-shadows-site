@@ -1,15 +1,102 @@
 // Game concept presentation interactivity
 class GamePresentation {
     constructor() {
+        this.currentLanguage = 'ru'; // Default language
         this.init();
     }
 
     init() {
+        this.setupLanguageSwitcher();
         this.setupNavigation();
         this.setupScrollAnimations();
         this.setupIntersectionObserver();
         this.setupBossCardInteractions();
         this.setupSmoothScrolling();
+    }
+
+    // Language switching functionality
+    setupLanguageSwitcher() {
+        const langButtons = document.querySelectorAll('.lang-btn');
+        
+        langButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.getAttribute('data-lang');
+                this.switchLanguage(lang);
+                
+                // Update active button state
+                langButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+        
+        // Set initial active state
+        const initialLangBtn = document.querySelector(`[data-lang="${this.currentLanguage}"]`);
+        if (initialLangBtn) {
+            initialLangBtn.classList.add('active');
+        }
+    }
+
+    switchLanguage(lang) {
+        this.currentLanguage = lang;
+        
+        // Update HTML lang attribute
+        document.documentElement.lang = lang;
+        
+        // Update page title
+        const title = lang === 'ru' ? 'Изумрудные тени - Концепция игры' : 'Emerald Shadows - Game Concept';
+        document.title = title;
+        
+        // Add switching animation
+        const languageSwitcher = document.querySelector('.language-switcher');
+        languageSwitcher.classList.add('switching');
+        
+        // Translate all elements with data-translate attribute
+        this.translatePage();
+        
+        // Save language preference to localStorage
+        localStorage.setItem('preferredLanguage', lang);
+        
+        // Add transition effect
+        document.body.style.opacity = '0.8';
+        setTimeout(() => {
+            document.body.style.opacity = '1';
+            languageSwitcher.classList.remove('switching');
+        }, 150);
+    }
+
+    translatePage() {
+        const elements = document.querySelectorAll('[data-translate]');
+        
+        elements.forEach(element => {
+            const key = element.getAttribute('data-translate');
+            const translation = this.getTranslation(key);
+            
+            if (translation) {
+                // Handle different element types
+                if (element.tagName === 'INPUT' && element.type === 'placeholder') {
+                    element.placeholder = translation;
+                } else if (element.tagName === 'IMG') {
+                    element.alt = translation;
+                } else {
+                    element.textContent = translation;
+                }
+            }
+        });
+    }
+
+    getTranslation(key) {
+        const keys = key.split('.');
+        let translation = translations[this.currentLanguage];
+        
+        for (const k of keys) {
+            if (translation && translation[k] !== undefined) {
+                translation = translation[k];
+            } else {
+                return null;
+            }
+        }
+        
+        return translation;
     }
 
     // Navigation functionality
@@ -434,7 +521,21 @@ function addCustomAnimations() {
 // Initialize the presentation when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     addCustomAnimations();
-    new GamePresentation();
+    const gamePresentation = new GamePresentation();
+    
+    // Restore language preference from localStorage
+    const savedLanguage = localStorage.getItem('preferredLanguage');
+    if (savedLanguage && (savedLanguage === 'ru' || savedLanguage === 'en')) {
+        gamePresentation.switchLanguage(savedLanguage);
+        
+        // Update button state
+        const langButtons = document.querySelectorAll('.lang-btn');
+        langButtons.forEach(b => b.classList.remove('active'));
+        const activeBtn = document.querySelector(`[data-lang="${savedLanguage}"]`);
+        if (activeBtn) {
+            activeBtn.classList.add('active');
+        }
+    }
     
     // Add enhanced boss effects
     const bossCards = document.querySelectorAll('.boss__card');
